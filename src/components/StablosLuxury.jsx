@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Search, ShoppingBag, Shield, CreditCard, Star, Diamond } from 'lucide-react';
+import { Menu, Search, ShoppingBag } from 'lucide-react';
 
 const StablosLuxury = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,44 +58,8 @@ const StablosLuxury = () => {
           </div>
         </div>
       </div>
-
-      {/* Trust Badges */}
-      <div className="bg-black py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <TrustBadge
-              icon={<Shield className="h-8 w-8" />}
-              title="AUTHENTIC"
-              description="Guaranteed Genuine"
-            />
-            <TrustBadge
-              icon={<CreditCard className="h-8 w-8" />}
-              title="SECURE"
-              description="Safe Transactions"
-            />
-            <TrustBadge
-              icon={<Star className="h-8 w-8" />}
-              title="PREMIUM"
-              description="Expert Service"
-            />
-            <TrustBadge
-              icon={<Diamond className="h-8 w-8" />}
-              title="LUXURY"
-              description="Finest Quality"
-            />
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
-const TrustBadge = ({ icon, title, description }) => (
-  <div className="text-center">
-    <div className="flex justify-center mb-4 text-[#d4c4a7]">{icon}</div>
-    <h3 className="text-lg tracking-wider mb-2">{title}</h3>
-    <p className="text-sm text-neutral-400">{description}</p>
-  </div>
-);
 
 export default StablosLuxury;
